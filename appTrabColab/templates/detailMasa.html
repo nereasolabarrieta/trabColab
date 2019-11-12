@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block titulo %} Detalle de masa {% endblock %}
+
+{% block contenido %}
+<h2>Datos de la masa</h2>
+{% if masa %}
+    <ul>
+        <li>
+            {{ masa.nombre}}
+        </li>
+    </ul>
+{% else %}
+    <p>No existe esta masa</p>
+{% endif %}
+
+{% endblock %}

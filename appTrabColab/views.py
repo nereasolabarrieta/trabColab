@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, get_list_or_404
 from django.shortcuts import render
-from .models import Pizza, Masa, Ingrediente, IngredientePizza
+from .models import Pizza, Masa, Ingrediente
 
 #devuelve el listado de empresas
 def index(request):

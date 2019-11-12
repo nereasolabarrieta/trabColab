@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block titulo %} Detalle de ingrediente {% endblock %}
+
+{% block contenido %}
+<h2>Datos de la ingrediente</h2>
+{% if ingrediente %}
+    <ul>
+        <li>
+            {{ ingrediente.nombre}}
+        </li>
+        <li>
+            {{ ingrediente.calorias}}
+        </li>
+    </ul>
+{% else %}
+    <p>No existe este ingrediente</p>
+{% endif %}
+
+{% endblock %}

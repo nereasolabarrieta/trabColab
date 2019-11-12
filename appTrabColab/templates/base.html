@@ -10,15 +10,16 @@
 
     <!-- Title -->
     <title>Yummy Blog - Food Blog Template</title>
+    {% load static %}
 
     <!-- Favicon -->
-    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
 
     <!-- Core Stylesheet -->
     <link href="style.css" rel="stylesheet">
 
     <!-- Responsive CSS -->
-    <link href="css/responsive/responsive.css" rel="stylesheet">
+    <link href="{% static 'css/responsive/responsive.css'%}" rel="stylesheet">
 
 </head>
 

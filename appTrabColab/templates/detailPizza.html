@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block titulo %} Detalle de pizza {% endblock %}
+
+{% block contenido %}
+<h2>Datos de la pizza</h2>
+
+{% if pizza %}
+    <ul>
+        <li>
+            {{ pizza.nombre}}
+        </li>
+        <li>
+            {{ pizza.precio}}
+        </li>
+        <li>
+            {{ pizza.masa}}
+        </li>
+        <li>
+            {% if ingredientes%}
+            <ul>
+            {% for d in lista_ingredientes %}
+                <li>
+                    <a href="{% url 'detailIng' d.id %}">{{ d.nombre}}</a>
+                </li>
+            {% endfor %}
+            </ul>
+            {% else %}
+            <p>No hay ingredientes creadas.</p>
+            {% endif %}
+        </li>
+    </ul>
+{% else %}
+    <p>No existe esta pizza</p>
+{% endif %}
+
+{% endblock %}

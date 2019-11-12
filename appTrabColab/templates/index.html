@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block titulo %}Listado de pizzas{% endblock %}
+
+{% block contenidoPizza %}
+<h2>Pizzas</h2>
+{% if lista_pizzas %}
+	<ul>
+	{% for d in lista_pizzas %}
+		<li>
+		    <a href="{% url 'detailPizza' d.id %}">{{ d.nombre}}</a>
+		</li>
+	{% endfor %}
+	</ul>
+{% else %}
+<p>No hay pizzas creados.</p>
+{% endif %}
+{% endblock %}
+
+{% block contenidoMasa %}
+<h2>Masas</h2>
+{% if lista_masas %}
+	<ul>
+	{% for d in lista_masas %}
+		<li>
+		    <a href="{% url 'detailMasa' d.id %}">{{ d.nombre}}</a>
+		</li>
+	{% endfor %}
+	</ul>
+{% else %}
+<p>No hay masas creadas.</p>
+{% endif %}
+{% endblock %}
+
+{% block contenidoIngrediente %}
+<h2>Ingredientes</h2>
+{% if lista_ingredientes %}
+	<ul>
+	{% for d in lista_ingredientes %}
+		<li>
+		    <a href="{% url 'detailIng' d.id %}">{{ d.nombre}}</a>
+		</li>
+	{% endfor %}
+	</ul>
+{% else %}
+<p>No hay ingredientes creados.</p>
+{% endif %}
+{% endblock %}
