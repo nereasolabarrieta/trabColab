@@ -9,14 +9,24 @@ def index(request):
 	return render(request, 'index.html', context)
 
 #devuelve los datos de un departamento
-def detail(request, pizza_id):
+def detailPizza(request, pizza_id):
+	pizza = get_object_or_404(Pizza, pk=pizza_id)
+	context = {'pizza': pizza }
+	return render(request, 'detailPizza.html', context)
+
+def detailMasa(request, masa_id):
 	masa = get_object_or_404(Masa, pk=pizza_id)
 	context = {'masa': masa }
-	return render(request, 'detail.html', context)
+	return render(request, 'detailMasa.html', context)
+
+def detailIng(request, ingrediente_id):
+	ingrediente = get_object_or_404(Ingrediente, pk=ingrediente_id)
+	context = {'ingrediente': ingrediente }
+	return render(request, 'detailIng.html', context)
 
 #devuelve los empelados de un departamento
-def empleados(request, pizza_id):
+def ingredientes(request, pizza_id):
 	pizza = get_object_or_404(Pizza, pk=pizza_id)
 	ingredientes =  pizza.ingredientes_set.all()
 	context = {'pizza': pizza, 'ingredientes' : ingredientes }
-	return render(request, 'ingredientes.html', context)
+	return render(request, 'detailIng.html', context)
