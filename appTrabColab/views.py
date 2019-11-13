@@ -1,22 +1,23 @@
 from django.shortcuts import get_object_or_404, get_list_or_404
 from django.shortcuts import render
+from django.db.models import Avg, Max, Min, Count
 from .models import Pizza, Masa, Ingrediente
 
 #devuelve el listado de empresas
 def index(request):
-	pizza = get_list_or_404(Pizza.objects.order_by('nombre'))
+#	pizza = get_list_or_404(Pizza.objects.values('masa_id'))
+	pizza = get_list_or_404(Pizza.objects.annotate(precio=Max('precio')))
 	context = {'lista_pizzas': pizza }
 	return render(request, 'index.html', context)
 
 def pizzas(request):
 	pizzas = get_list_or_404(Pizza.objects.order_by('nombre'))
-	masa = get_object_or_404(Masa, pk=masa_id)
 	context = {'lista_pizzas': pizzas }
 	return render(request, 'pizzas.html', context)
 
 def masas(request):
 	masas = get_list_or_404(Masa.objects.order_by('nombre'))
-	context = {'lista_masas': masas, 'masa' : masa }
+	context = {'lista_masas': masas }
 	return render(request, 'masas.html', context)
 
 def ingredientes(request):
@@ -32,7 +33,8 @@ def detailPizza(request, pizza_id):
 
 def detailMasa(request, masa_id):
 	masa = get_object_or_404(Masa, pk=masa_id)
-	context = {'masa': masa }
+	pizzas = get_list_or_404(Pizza.objects.values('masa_id'))
+	context = {'masa': masa , 'pizzas' : pizzas}
 	return render(request, 'detailMasa.html', context)
 
 def detailIng(request, ingrediente_id):

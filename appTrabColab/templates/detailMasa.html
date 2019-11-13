@@ -10,11 +10,19 @@
             Nombre: {{masa.nombre}}
         </li>
         <li>
-            Pizzas: {{masa.nombre}}
+            {% if pizzas %}
+            Pizzas con esta masa:
+            {% for d in pizzas %}
+            <ul>
+            <li>
+                {{ d.nombre}}
+            </li>
+            {% endfor %}
+            {% endif %}
+        </ul>
         </li>
     </ul>
 {% else %}
     <p>No existe esta masa</p>
 {% endif %}
-
 {% endblock %}
