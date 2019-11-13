@@ -5,17 +5,16 @@ from .models import Pizza, Masa, Ingrediente
 #devuelve el listado de empresas
 def index(request):
 	pizza = get_list_or_404(Pizza.objects.order_by('nombre'))
-	context = {'lista_pizzas': pizzas }
+	context = {'lista_pizzas': pizza }
 	return render(request, 'index.html', context)
 
-#devuelve los datos de un departamento
 def detailPizza(request, pizza_id):
 	pizza = get_object_or_404(Pizza, pk=pizza_id)
 	context = {'pizza': pizza }
 	return render(request, 'detailPizza.html', context)
 
 def detailMasa(request, masa_id):
-	masa = get_object_or_404(Masa, pk=pizza_id)
+	masa = get_object_or_404(Masa, pk=masa_id)
 	context = {'masa': masa }
 	return render(request, 'detailMasa.html', context)
 
