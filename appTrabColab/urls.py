@@ -5,5 +5,9 @@ urlpatterns = [
 	path('', views.index, name='index'),
 	path('pizza/<int:pizza_id>/', views.detailPizza, name='detailPizza'),
 	path('masa/<int:masa_id>/', views.detailMasa, name='detailMasa'),
-	path('ingrediente/<int:ingrediente_id>/', views.detailIng, name='detailIng')
+	path('ingrediente/<int:ingrediente_id>/', views.detailIng, name='detailIng'),
+	path('pizza/<int:pizza_id>/ingredientes', views.ingredientesPizza, name='ingredientesPizza'),
+	path('pizzas/', views.pizzas, name='pizzas'),
+	path('masas/', views.masas, name='masas'),
+	path('ingredientes/', views.ingredientes, name='ingredientes')
 ]

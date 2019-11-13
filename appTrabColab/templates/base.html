@@ -11,15 +11,15 @@
     <!-- Title -->
     <title>Mamma Mia</title>
 
-
+    {% load static %}
     <!-- Favicon -->
-    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
 
    
     <!-- Core Stylesheet -->
-    <link href="style.css" rel="stylesheet">
+    <link href="{% static 'style.css' %}" rel="stylesheet">
 
-    {% load static %}
+   
     <!-- Responsive CSS -->
     <link href="{% static 'css/responsive/responsive.css'%}" rel="stylesheet">
 
@@ -58,10 +58,10 @@
                     <div class="signup-search-area d-flex align-items-center justify-content-end">
                         <div class="login_register_area d-flex">
                             <div class="login">
-                                <a href="register.html">Sing in (no tenemos)</a>
+                                <a href="register.html">Contacta</a>
                             </div>
                             <div class="register">
-                                <a href="register.html">Sing up (no tenemos)</a>
+                                <a href="register.html">943434343 / mammamia@donosti.es</a>
                             </div>
                         </div>
                         <!-- Search Button Area -->
@@ -90,7 +90,7 @@
                 <!-- Logo Area Start -->
                 <div class="col-12">
                     <div class="logo_area text-center">
-                        <a href="{% url 'index' %}" class="yummy-logo">Mamma Mia</a>
+                        <a href="#" class="yummy-logo">Mamma Mia</a>
                     </div>
                 </div>
             </div>
@@ -145,7 +145,7 @@
         <!-- Single Slide -->
         <div class="welcome-single-slide">
             <!-- Post Thumb -->
-            <img src="img/bg-img/slide-1.jpg" alt="">
+            <img src="{% static 'img/bg-img/slide-1.jpg' %}" alt="">
             <!-- Overlay Text -->
             <div class="project_title">
                 <div class="post-date-commnents d-flex">
@@ -161,7 +161,7 @@
         <!-- Single Slide -->
         <div class="welcome-single-slide">
             <!-- Post Thumb -->
-            <img src="img/bg-img/slide-2.jpg" alt="">
+            <img src="{% static 'img/bg-img/slide-2.jpg' %}" alt="">
             <!-- Overlay Text -->
             <div class="project_title">
                 <div class="post-date-commnents d-flex">
@@ -177,7 +177,7 @@
         <!-- Single Slide -->
         <div class="welcome-single-slide">
             <!-- Post Thumb -->
-            <img src="img/bg-img/slide-3.jpg" alt="">
+            <img src="{% static 'img/bg-img/slide-3.jpg' %}" alt="">
             <!-- Overlay Text -->
             <div class="project_title">
                 <div class="post-date-commnents d-flex">
@@ -193,7 +193,7 @@
         <!-- Single Slide -->
         <div class="welcome-single-slide">
             <!-- Post Thumb -->
-            <img src="img/bg-img/slide-4.jpg" alt="">
+            <img src="{% static 'img/bg-img/slide-4.jpg' %}" alt="">
             <!-- Overlay Text -->
             <div class="project_title">
                 <div class="post-date-commnents d-flex">
@@ -209,7 +209,7 @@
         <!-- Single Slide -->
         <div class="welcome-single-slide">
             <!-- Post Thumb -->
-            <img src="img/bg-img/slide-4.jpg" alt="">
+            <img src="{% static 'img/bg-img/slide-4.jpg' %}" alt="">
             <!-- Overlay Text -->
             <div class="project_title">
                 <div class="post-date-commnents d-flex">
@@ -231,30 +231,30 @@
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="single_catagory wow fadeInUp" data-wow-delay=".3s">
-                        <img src="img/catagory-img/1.jpg" alt="">
+                        <img src="{% static 'img/catagory-img/1.jpg' %}" alt="">
                         <div class="catagory-title">
-                            <a href="{% url 'detailPizza' %}">
-                                <h5>Pizza</h5>
+                            <a href="{% url 'pizzas' %}">
+                                <h5>Pizzas</h5>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="single_catagory wow fadeInUp" data-wow-delay=".6s">
-                        <img src="img/catagory-img/2.jpg" alt="">
+                        <img src="{% static 'img/catagory-img/2.jpg' %}" alt="">
                         <div class="catagory-title">
-                            <a href="#">
-                                <h5>Cooking</h5>
+                            <a href="{% url 'masas' %}">
+                                <h5>Masas</h5>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="single_catagory wow fadeInUp" data-wow-delay=".9s">
-                        <img src="img/catagory-img/3.jpg" alt="">
+                        <img src="{% static 'img/catagory-img/3.jpg' %}" alt="">
                         <div class="catagory-title">
-                            <a href="#">
-                                <h5>Life Style</h5>
+                            <a href="{% url 'ingredientes' %}">
+                                <h5>Ingredientes</h5>
                             </a>
                         </div>
                     </div>
@@ -275,44 +275,8 @@
                         <div class="col-12">
                             <div class="single-post wow fadeInUp" data-wow-delay=".2s">
                                 <!-- Post Thumb -->
-                                <div class="post-thumb">
-                                    <img src="img/blog-img/1.jpg" alt="">
-                                </div>
-                                <!-- Post Content -->
-                                <div class="post-content">
-                                    <div class="post-meta d-flex">
-                                        <div class="post-author-date-area d-flex">
-                                            <!-- Post Author -->
-                                            <div class="post-author">
-                                                <a href="#">By Marian</a>
-                                            </div>
-                                            <!-- Post Date -->
-                                            <div class="post-date">
-                                                <a href="#">May 19, 2017</a>
-                                            </div>
-                                        </div>
-                                        <!-- Post Comment & Share Area -->
-                                        <div class="post-comment-share-area d-flex">
-                                            <!-- Post Favourite -->
-                                            <div class="post-favourite">
-                                                <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i> 10</a>
-                                            </div>
-                                            <!-- Post Comments -->
-                                            <div class="post-comments">
-                                                <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i> 12</a>
-                                            </div>
-                                            <!-- Post Share -->
-                                            <div class="post-share">
-                                                <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <a href="#">
-                                        <h2 class="post-headline">Boil The Kettle And Make A Cup Of Tea Folks, This Is Going To Be A Big One!</h2>
-                                    </a>
-                                    <p>Tiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat.</p>
-                                    <a href="#" class="read-more">Continue Reading..</a>
-                                </div>
+                                {% block contenido%}
+                                {% endblock%}
                             </div>
                         </div>
 
@@ -321,7 +285,7 @@
                             <div class="single-post wow fadeInUp" data-wow-delay=".4s">
                                 <!-- Post Thumb -->
                                 <div class="post-thumb">
-                                    <img src="img/blog-img/2.jpg" alt="">
+                                    <img src="{% static 'img/blog-img/2.jpg' %}" alt="">
                                 </div>
                                 <!-- Post Content -->
                                 <div class="post-content">
@@ -364,7 +328,7 @@
                             <div class="single-post wow fadeInUp" data-wow-delay=".6s">
                                 <!-- Post Thumb -->
                                 <div class="post-thumb">
-                                    <img src="img/blog-img/3.jpg" alt="">
+                                    <img src="{% static 'img/blog-img/3.jpg' %}" alt="">
                                 </div>
                                 <!-- Post Content -->
                                 <div class="post-content">
@@ -407,7 +371,7 @@
                             <div class="single-post wow fadeInUp" data-wow-delay=".8s">
                                 <!-- Post Thumb -->
                                 <div class="post-thumb">
-                                    <img src="img/blog-img/4.jpg" alt="">
+                                    <img src="{% static 'img/blog-img/4.jpg' %}" alt="">
                                 </div>
                                 <!-- Post Content -->
                                 <div class="post-content">
@@ -450,7 +414,7 @@
                             <div class="single-post wow fadeInUp" data-wow-delay="1s">
                                 <!-- Post Thumb -->
                                 <div class="post-thumb">
-                                    <img src="img/blog-img/5.jpg" alt="">
+                                    <img src="{% static 'img/blog-img/5.jpg' %}" alt="">
                                 </div>
                                 <!-- Post Content -->
                                 <div class="post-content">
@@ -495,7 +459,7 @@
                             <div class="list-blog single-post d-sm-flex wow fadeInUpBig" data-wow-delay=".2s">
                                 <!-- Post Thumb -->
                                 <div class="post-thumb">
-                                    <img src="img/blog-img/6.jpg" alt="">
+                                    <img src="{% static 'img/blog-img/6.jpg' %}" alt="">
                                 </div>
                                 <!-- Post Content -->
                                 <div class="post-content">
@@ -540,7 +504,7 @@
                             <div class="list-blog single-post d-sm-flex wow fadeInUpBig" data-wow-delay=".4s">
                                 <!-- Post Thumb -->
                                 <div class="post-thumb">
-                                    <img src="img/blog-img/7.jpg" alt="">
+                                    <img src="{% static 'img/blog-img/7.jpg' %}" alt="">
                                 </div>
                                 <!-- Post Content -->
                                 <div class="post-content">
@@ -585,7 +549,7 @@
                             <div class="list-blog single-post d-sm-flex wow fadeInUpBig" data-wow-delay=".6s">
                                 <!-- Post Thumb -->
                                 <div class="post-thumb">
-                                    <img src="img/blog-img/8.jpg" alt="">
+                                    <img src="{% static 'img/blog-img/8.jpg' %}" alt="">
                                 </div>
                                 <!-- Post Content -->
                                 <div class="post-content">
@@ -630,7 +594,7 @@
                             <div class="list-blog single-post d-sm-flex wow fadeInUpBig" data-wow-delay=".8s">
                                 <!-- Post Thumb -->
                                 <div class="post-thumb">
-                                    <img src="img/blog-img/9.jpg" alt="">
+                                    <img src="{% static 'img/blog-img/9.jpg' %}" alt="">
                                 </div>
                                 <!-- Post Content -->
                                 <div class="post-content">
@@ -682,7 +646,7 @@
                                 <h6>About Me</h6>
                             </div>
                             <div class="about-me-widget-thumb">
-                                <img src="img/about-img/1.jpg" alt="">
+                                <img src="{% static 'img/about-img/1.jpg' %ç" alt="">
                             </div>
                             <h4 class="font-shadow-into-light">Shopia Bernard</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
@@ -710,7 +674,7 @@
                             </div>
                             <!-- Single Popular Post -->
                             <div class="single-populer-post d-flex">
-                                <img src="img/sidebar-img/1.jpg" alt="">
+                                <img src="{% static 'img/sidebar-img/1.jpg' %}" alt="">
                                 <div class="post-content">
                                     <a href="#">
                                         <h6>Top Wineries To Visit In England</h6>
@@ -720,7 +684,7 @@
                             </div>
                             <!-- Single Popular Post -->
                             <div class="single-populer-post d-flex">
-                                <img src="img/sidebar-img/2.jpg" alt="">
+                                <img src="{% static 'img/sidebar-img/2.jpg' %}" alt="">
                                 <div class="post-content">
                                     <a href="#">
                                         <h6>The 8 Best Gastro Pubs In Bath</h6>
@@ -730,7 +694,7 @@
                             </div>
                             <!-- Single Popular Post -->
                             <div class="single-populer-post d-flex">
-                                <img src="img/sidebar-img/3.jpg" alt="">
+                                <img src="{% static 'img/sidebar-img/3.jpg' %}" alt="">
                                 <div class="post-content">
                                     <a href="#">
                                         <h6>Zermatt Unplugged the best festival</h6>
@@ -740,7 +704,7 @@
                             </div>
                             <!-- Single Popular Post -->
                             <div class="single-populer-post d-flex">
-                                <img src="img/sidebar-img/4.jpg" alt="">
+                                <img src="{% static 'img/sidebar-img/4.jpg' %}" alt="">
                                 <div class="post-content">
                                     <a href="#">
                                         <h6>Harrogate's Top 10 Independent Eats</h6>
@@ -750,7 +714,7 @@
                             </div>
                             <!-- Single Popular Post -->
                             <div class="single-populer-post d-flex">
-                                <img src="img/sidebar-img/5.jpg" alt="">
+                                <img src="{% static 'img/sidebar-img/5.jpg' %}" alt="">
                                 <div class="post-content">
                                     <a href="#">
                                         <h6>Eating Out On A Budget In Oxford</h6>
@@ -763,7 +727,7 @@
                         <!-- Single Widget Area -->
                         <div class="single-widget-area add-widget text-center">
                             <div class="add-widget-area">
-                                <img src="img/sidebar-img/6.jpg" alt="">
+                                <img src="{% static 'img/sidebar-img/6.jpg' %}" alt="">
                                 <div class="add-text">
                                     <div class="yummy-table">
                                         <div class="yummy-table-cell">
@@ -802,7 +766,7 @@
         <!-- Instagram Item -->
         <div class="instagram_gallery_item">
             <!-- Instagram Thumb -->
-            <img src="img/instagram-img/1.jpg" alt="">
+            <img src="{% static 'img/instagram-img/1.jpg' %}" alt="">
             <!-- Hover -->
             <div class="hover_overlay">
                 <div class="yummy-table">
@@ -818,7 +782,7 @@
         <!-- Instagram Item -->
         <div class="instagram_gallery_item">
             <!-- Instagram Thumb -->
-            <img src="img/instagram-img/2.jpg" alt="">
+            <img src="{% static 'img/instagram-img/2.jpg' %}" alt="">
             <!-- Hover -->
             <div class="hover_overlay">
                 <div class="yummy-table">
@@ -834,7 +798,7 @@
         <!-- Instagram Item -->
         <div class="instagram_gallery_item">
             <!-- Instagram Thumb -->
-            <img src="img/instagram-img/3.jpg" alt="">
+            <img src="{% static 'img/instagram-img/3.jpg' %}" alt="">
             <!-- Hover -->
             <div class="hover_overlay">
                 <div class="yummy-table">
@@ -850,7 +814,7 @@
         <!-- Instagram Item -->
         <div class="instagram_gallery_item">
             <!-- Instagram Thumb -->
-            <img src="img/instagram-img/4.jpg" alt="">
+            <img src="{% static 'img/instagram-img/4.jpg' %}" alt="">
             <!-- Hover -->
             <div class="hover_overlay">
                 <div class="yummy-table">
@@ -866,7 +830,7 @@
         <!-- Instagram Item -->
         <div class="instagram_gallery_item">
             <!-- Instagram Thumb -->
-            <img src="img/instagram-img/5.jpg" alt="">
+            <img src="{% static 'img/instagram-img/5.jpg' %}" alt="">
             <!-- Hover -->
             <div class="hover_overlay">
                 <div class="yummy-table">
@@ -882,7 +846,7 @@
         <!-- Instagram Item -->
         <div class="instagram_gallery_item">
             <!-- Instagram Thumb -->
-            <img src="img/instagram-img/6.jpg" alt="">
+            <img src="{% static 'img/instagram-img/6.jpg' %}" alt="">
             <!-- Hover -->
             <div class="hover_overlay">
                 <div class="yummy-table">
@@ -898,7 +862,7 @@
         <!-- Instagram Item -->
         <div class="instagram_gallery_item">
             <!-- Instagram Thumb -->
-            <img src="img/instagram-img/1.jpg" alt="">
+            <img src="{% static 'img/instagram-img/1.jpg' %}" alt="">
             <!-- Hover -->
             <div class="hover_overlay">
                 <div class="yummy-table">
@@ -914,7 +878,7 @@
         <!-- Instagram Item -->
         <div class="instagram_gallery_item">
             <!-- Instagram Thumb -->
-            <img src="img/instagram-img/2.jpg" alt="">
+            <img src="{% static 'img/instagram-img/2.jpg' %}" alt="">
             <!-- Hover -->
             <div class="hover_overlay">
                 <div class="yummy-table">
@@ -1021,13 +985,13 @@
     <!-- ****** Footer Menu Area End ****** -->
 
     <!-- Jquery-2.2.4 js -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
     <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
+    <script src="{% static 'js/bootstrap/popper.min.js' %}"></script>
     <!-- Bootstrap-4 js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
     <!-- All Plugins JS -->
-    <script src="js/others/plugins.js"></script>
+    <script src="{% static 'js/others/plugins.js' %}"></script>
     <!-- Active JS -->
-    <script src="js/active.js"></script>
+    <script src="{% static 'js/active.js' %}"></script>
 </body>

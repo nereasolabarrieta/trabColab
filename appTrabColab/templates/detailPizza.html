@@ -8,16 +8,16 @@
 {% if pizza %}
     <ul>
         <li>
-            {{ pizza.nombre}}
+            Nombre:  {{ pizza.nombre}}
         </li>
         <li>
-            {{ pizza.precio}}
+            Precio (€): {{ pizza.precio}}
         </li>
         <li>
-            {{ pizza.masa}}
+            Tipo de masa: {{ pizza.masa}}
         </li>
         <li>
-            {% if ingredientes%}
+            Ingredientes: {% if lista_ingredientes%}
             <ul>
             {% for d in lista_ingredientes %}
                 <li>
@@ -26,7 +26,7 @@
             {% endfor %}
             </ul>
             {% else %}
-            <p>No hay ingredientes creadas.</p>
+            <p>No hay ingredientes creados.</p>
             {% endif %}
         </li>
     </ul>

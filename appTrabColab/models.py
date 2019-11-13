@@ -3,16 +3,14 @@ from django.db import models
 class Masa(models.Model):
 	# Campo para la relación one-to-many
 	nombre = models.CharField(max_length=40)
-
-def __str__(self):
+	def __str__(self):
 		return self.nombre
 
 class Ingrediente(models.Model):
 	# Campo para la relación one-to-many
 	nombre = models.CharField(max_length=40)
 	calorias = models.IntegerField(default =0)
-
-def __str__(self):
+	def __str__(self):
 		return self.nombre
 
 class Pizza(models.Model):
@@ -21,8 +19,7 @@ class Pizza(models.Model):
 	masa = models.ForeignKey(Masa, on_delete = models.CASCADE)
 	precio = models.IntegerField(default =0)
 	ingredientes = models.ManyToManyField(Ingrediente)
-
-def __str__(self):
+	def __str__(self):
 		return self.nombre
 
 
