@@ -5,8 +5,8 @@ from .models import Pizza, Masa, Ingrediente
 
 #devuelve el listado de empresas
 def index(request):
-#	pizza = get_list_or_404(Pizza.objects.values('masa_id'))
-	pizza = get_list_or_404(Pizza.objects.annotate(precio=Max('precio')))
+	pizza = get_list_or_404(Pizza.objects.values('masa_id'))
+#	pizza = get_list_or_404(Pizza.objects.annotate(precio=Max('precio')))
 	context = {'lista_pizzas': pizza }
 	return render(request, 'index.html', context)
 
